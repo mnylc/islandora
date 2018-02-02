@@ -283,7 +283,9 @@ function islandora_datastream_version_replace_form($form, &$form_state, Abstract
   $form_state['object'] = $object;
 
   $extensions = islandora_get_extensions_for_datastream($object, $datastream->id);
+  dpm($extensions);
   $valid_extensions = implode(' ', $extensions);
+  dpm($valid_extensions);
   $upload_size = min((int) ini_get('post_max_size'), (int) ini_get('upload_max_filesize'));
   return array(
     'dsid_fieldset' => array(
