@@ -284,8 +284,8 @@ function islandora_datastream_version_replace_form($form, &$form_state, Abstract
 
   $extensions = islandora_get_extensions_for_datastream($object, $datastream->id);
   if (empty($extensions)) {
-     // In case no extensions are returned, don't limit.
-     $valid_extensions = NULL;
+    // In case no extensions are returned, don't limit.
+    $valid_extensions = NULL;
   }
   else {
     $valid_extensions = implode(' ', $extensions);

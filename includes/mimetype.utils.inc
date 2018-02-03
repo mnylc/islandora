@@ -78,7 +78,7 @@ function islandora_get_extensions_for_datastream(AbstractObject $object, $dsid) 
   $mimes = isset($datastream_mime_map[$dsid]) ? $datastream_mime_map[$dsid]['mime'] : array();
   // If no restriction set via DS-COMPOSITE-MODEL return an empty array.
   if (empty($mimes)) {
-     return array();
+    return array();
   }
   if (isset($object[$dsid])) {
     $current_mime = $object[$dsid]->mimetype;
